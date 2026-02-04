@@ -1,0 +1,205 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+.app-header {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  color: white;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.power-apps-logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  text-align: center;
+  background: linear-gradient(90deg, #ae4ae8, #742774, #ae4ae8);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+.status-card,
+.info-card,
+.features-card,
+.next-steps-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.status-card h2,
+.info-card h2,
+.features-card h2,
+.next-steps-card h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: #ae4ae8;
+}
+
+.status-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.status-indicator.success {
+  background: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+}
+
+.status-indicator.error {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}
+
+.status-indicator.loading {
+  background: rgba(59, 130, 246, 0.2);
+  color: #3b82f6;
+}
+
+.status-icon {
+  font-size: 1.25rem;
+}
+
+.spinner {
+  display: inline-block;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.time-display {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  font-family: 'Segoe UI', monospace;
+}
+
+.date-display {
+  margin: 0.5rem 0 0 0;
+  opacity: 0.8;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.features-list li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.features-list li:last-child {
+  border-bottom: none;
+}
+
+.features-list li strong {
+  display: block;
+  color: #ae4ae8;
+  margin-bottom: 0.25rem;
+}
+
+.features-list li p {
+  margin: 0;
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.next-steps-list {
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.next-steps-list li {
+  padding: 0.5rem 0;
+}
+
+.next-steps-list code {
+  background: rgba(174, 74, 232, 0.2);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  font-family: 'Consolas', 'Monaco', monospace;
+  color: #ae4ae8;
+}
+
+.app-footer {
+  margin-top: auto;
+  padding: 1rem;
+  text-align: center;
+  opacity: 0.8;
+}
+
+.app-footer a {
+  color: #ae4ae8;
+  text-decoration: none;
+}
+
+.app-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  .status-card,
+  .info-card,
+  .features-card,
+  .next-steps-card {
+    padding: 1rem;
+    margin: 0 1rem 1rem 1rem;
+  }
+
+  .time-display {
+    font-size: 1.5rem;
+  }
+}

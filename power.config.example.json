@@ -1,0 +1,16 @@
+{
+  "$schema": "https://aka.ms/power-apps/code-apps/schema",
+  "displayName": "Hello World",
+  "description": "A simple Hello World Power Apps Code App demonstration",
+  "version": "1.0.0",
+  "publisher": {
+    "name": "Your Organization",
+    "prefix": "sample"
+  },
+  "app": {
+    "entryPoint": "dist/index.html",
+    "port": 3000
+  },
+  "dataSources": [],
+  "connectors": []
+}
