@@ -2,6 +2,12 @@
 
 A simple "Hello World" demonstration of [Power Apps Code Apps](https://learn.microsoft.com/en-us/power-apps/developer/code-apps/overview) - Microsoft's code-first approach to building enterprise applications on the Power Platform.
 
+## Live Demo
+
+View the static demo at: **https://mpparsley.github.io/hello-power-apps-code-apps/**
+
+> **Note**: The GitHub Pages demo shows the UI only. Full Power Platform connectivity requires running locally with `pac code run`.
+
 ## What are Power Apps Code Apps?
 
 Power Apps Code Apps let developers build custom web applications using popular frameworks (React, Vue, Angular) while leveraging the Power Platform's enterprise capabilities:
@@ -67,7 +73,17 @@ cd hello-power-apps-code-apps
 npm install
 ```
 
-### 3. Authenticate with Power Platform
+### 3. Install Power Apps SDK (Preview Access Required)
+
+If you have access to the Code Apps preview program, install the SDK:
+
+```bash
+npm install @microsoft/power-apps@latest
+```
+
+> **Note**: The `@microsoft/power-apps` package requires enrollment in the early access preview at https://aka.ms/paCodeAppsEAP
+
+### 4. Authenticate with Power Platform
 
 ```bash
 pac auth create
@@ -75,7 +91,7 @@ pac auth create
 
 This will open a browser window for Microsoft Entra authentication.
 
-### 4. Initialize the Code App (if not already done)
+### 5. Initialize the Code App (if not already done)
 
 ```bash
 pac code init --displayName "Hello World" --description "A simple Hello World Power Apps Code App"
@@ -83,7 +99,7 @@ pac code init --displayName "Hello World" --description "A simple Hello World Po
 
 This creates the `power.config.json` file that connects your app to Power Platform.
 
-### 5. Run Locally
+### 6. Run Locally
 
 ```bash
 npm run dev
@@ -91,7 +107,7 @@ npm run dev
 
 This starts both the Vite development server and the PAC CLI server. Open http://localhost:3000 in your browser.
 
-### 6. Build and Publish
+### 7. Build and Publish
 
 ```bash
 # Build the app
